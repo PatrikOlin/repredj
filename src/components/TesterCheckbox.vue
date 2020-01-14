@@ -1,16 +1,24 @@
 <template>
     <main class="mainWrapper">
         <div class="checkboxContainer">
-            <div class="checkBox">
+            <div class="checkboxWrapper">
+                <div v-if="!clicked" v-on:click="onClick()" class="checkbox">
+                </div>
+                <LoadingSpinner v-if="clicked" />
             </div>
-            <h3>I'm not {{label}}</h3>
+            <h3 style="margin-left: 15px; padding-top:3px;">I'm not {{label}}</h3>
         </div>
     </main>
 </template>
 <script lang="ts">
  import { Component, Prop, Vue } from 'vue-property-decorator';
+ import LoadingSpinner from './LoadingSpinner.vue';
 
- @Component
+ @Component({
+     components: {
+         LoadingSpinner
+     }
+ })
  export default class TesterCheckbox extends Vue {
 
      srcLabels = [
@@ -21,6 +29,7 @@
          "a misogynist",
          "a misandrist",
      ]
+     clicked = false;
 
      label: string = '';
 
@@ -32,6 +41,11 @@
          const label = array[Math.floor(Math.random()*array.length)];
          return label;
      }
+
+     onClick () {
+         this.$root.$emit('checkbox_checked', true)
+         this.clicked = !this.clicked;
+     }
  }
 </script>
 <style scoped>
@@ -39,16 +53,21 @@
      margin-bottom: 20px;
  }
 
- .checkBox {
+ .checkbox {
      display: block;
-     width: 20px;
-     height: 20px;
-     margin-right: 15px;
-     margin-bottom: 2px;
+     width: 50%;
+     height: 50%;
      cursor: pointer;
+     margin: auto;
      font-size: 22px;
      border-radius: 3px;
      border: 3px solid lightgrey;
+ }
+
+ .checkboxWrapper {
+     display: flex;
+     width: 45px;
+     height: 45px;
  }
 
  .checkboxContainer {
@@ -58,9 +77,11 @@
      justify-items: center;
      margin: auto;
      width: 460px;
+     height: 100%;
      padding: 10px;
-     background-color: white;
+     background-color: #F8F8FF;
      border-radius: 3px;
      box-shadow: 0px 0px 1px 1px #999;
+     transition: height 10s ease-out;
  }
 </style>

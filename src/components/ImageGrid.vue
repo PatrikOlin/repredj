@@ -7,7 +7,7 @@
         <div
             v-for='(image, index) in images'
             :key='image.id'
-            class='grid-item'
+            class='grid-item clickable'
             v-on:click="imgOnClick(index)"
             v-bind:class="{chosen: image.isChosen}">
             <span class='chosenCheckmark' v-if="image.isChosen"><i class="fas fa-2x fa-check-circle"></i></span>
@@ -15,13 +15,16 @@
 
         </div>
     </div>
+        <div class="tryAgain" v-if="tryAgain">
+            <p>Please try again</p>
+        </div>
     <div class='footerContainer'>
         <div class='miscButtons'>
-            <span v-on:click='onRedo()'><i class="fas fa-lg fa-redo"></i></span>
+            <span v-on:click='onRedo()' class="clickable"><i class="fas fa-lg fa-redo"></i></span>
             <span><i class="fas fa-lg fa-headphones-alt"></i></span>
             <span><i class="fas fa-lg fa-info-circle"></i></span>
         </div>
-        <button type="button">Verify</button>
+        <button type="button" v-on:click='onSubmit()'>Verify</button>
     </div>
     </main>
 </template>
@@ -71,6 +74,7 @@
      ]
      images: any[] = [];
      taskSelectionItem: string = ''
+     tryAgain = false;
 
      mounted () {
          this.randomize();
@@ -95,13 +99,24 @@
          this.randomize();
      }
 
+     onSubmit () {
+         this.randomize();
+         this.tryAgain = true;
+     }
+
      randomize () {
+        this.clearAllChosen();
         this.images = this.shuffleArray(this.srcImages).slice(0, 9);
          console.log(JSON.parse(JSON.stringify(this.images)));
         this.taskSelectionItem = this.pickTaskSelectionItem(this.srcTaskSelectionItems);
      }
 
+     clearAllChosen () {
+         this.srcImages.forEach(img => img.isChosen = false)
+     }
+
      imgOnClick (index: number) {
+         this.tryAgain = false;
          this.images[index].isChosen = !this.images[index].isChosen;
      }
 
@@ -125,6 +140,12 @@ box-shadow: 5px 5px 3px #999;
      width: 100%;
      background-color: #4187df;
      height: 150px;
+ }
+
+ .tryAgain {
+     margin: auto;
+     font-weight: 400;
+     color: red;
  }
 
  .headerContainer h2 {
@@ -198,6 +219,10 @@ box-shadow: 5px 5px 3px #999;
      color: #4187df;
      background-color: white;
      border-radius: 35px;
+ }
+
+ button, .clickable {
+     cursor: pointer;
  }
 
 
