@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TesterCheckbox />
     <ImageGrid />
   </div>
 </template>
@@ -7,12 +8,14 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
- import ImageGrid from "./components/ImageGrid.vue";
+import ImageGrid from "./components/ImageGrid.vue";
+import TesterCheckbox from "./components/TesterCheckbox.vue";
 
 @Component({
   components: {
     HelloWorld,
-    ImageGrid
+    ImageGrid,
+    TesterCheckbox,
   }
 })
 export default class App extends Vue {}
