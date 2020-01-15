@@ -132,8 +132,17 @@
      margin: auto;
      width: 460px;
      padding: 10px;
-     background-color: white;
-box-shadow: 5px 5px 3px #999;
+ }
+
+ .triangle {
+     width: 0;
+     height: 0;
+     border-color: transparent white;
+     border-style: solid;
+     border-width: 20px 20px 20px 0px;
+     position: absolute;
+     top: 57%;
+     margin-left: -15px;
  }
 
  .headerContainer {
@@ -171,11 +180,11 @@ box-shadow: 5px 5px 3px #999;
  }
 
  .footerContainer button {
-     background-color: #4187df;
      color: white;
      font-weight: 600;
      padding: 10px 30px 10px 30px;
      border-radius: 5px;
+     background-color: #4187df;
  }
 
  .miscButtons {

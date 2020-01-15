@@ -28,6 +28,10 @@
          "an ageist",
          "a misogynist",
          "a misandrist",
+         "judgmental",
+         "predjudiced",
+         "biased",
+         "an anti-semite"
      ]
      clicked = false;
 
@@ -79,9 +83,5 @@
      width: 460px;
      height: 100%;
      padding: 10px;
-     background-color: #F8F8FF;
-     border-radius: 3px;
-     box-shadow: 0px 0px 1px 1px #999;
-     transition: height 10s ease-out;
  }
 </style>

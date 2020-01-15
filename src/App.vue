@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <TesterCheckbox class='testerContainer' />
-    <ImageGrid class='imageGridContainer' v-bind:class='{show: checked}'/>
+      <main class='testerContainer' v-bind:class='{folded: !checked}'>
+    <TesterCheckbox />
+      <article class='imageGridContainer' v-bind:class='{show: checked}'>
+    <ImageGrid />
+      </article>
+      </main>
   </div>
 </template>
 
@@ -34,18 +38,26 @@ export default class App extends Vue {
 
 <style>
  .testerContainer {
-     height: 60px;
      margin: auto;
+     height: 860px;
+     box-shadow: 1px 1px 3px 3px #999;
+     transition: all .5s ease-out;
+     background-color: #F8F8FF;
+     border-radius: 3px;
+ }
+
+ .folded {
+     height: 80px;
  }
 
  .imageGridContainer {
-     visibility: hidden;
+     height: 0px;
      transition: all .5s ease-out;
+     overflow: auto;
  }
 
-
  .show {
-     visibility: visible;
+     height: 100%;
  }
 
 #app {
@@ -55,5 +67,7 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+    display: flex;
+    align-items: center;
 }
 </style>
