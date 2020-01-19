@@ -10,19 +10,19 @@
             class='grid-item clickable'
             v-on:click="imgOnClick(index)"
             v-bind:class="{chosen: image.isChosen}">
-            <span class='chosenCheckmark' v-if="image.isChosen"><i class="fas fa-2x fa-check-circle"></i></span>
+            <span class='chosenCheckmark' v-if="image.isChosen">
+                <i class="fas fa-2x fa-check-circle"></i></span>
             <img :src='image.url'/>
-
         </div>
     </div>
-        <div class="tryAgain" v-if="tryAgain">
-            <p>Please try again</p>
-        </div>
     <div class='footerContainer'>
         <div class='miscButtons'>
             <span v-on:click='onRedo()' class="clickable"><i class="fas fa-lg fa-redo"></i></span>
             <span><i class="fas fa-lg fa-headphones-alt"></i></span>
             <span><i class="fas fa-lg fa-info-circle"></i></span>
+        </div>
+        <div class="tryAgain" v-bind:class="{hidden: !tryAgain}">
+            <p>Please try again</p>
         </div>
         <button type="button" v-on:click='onSubmit()'>Verify</button>
     </div>
@@ -70,6 +70,7 @@
          'the mentally ill.',
          'poor people.',
          'rich people.',
+         'child abusers.',
         
      ]
      images: any[] = [];
@@ -155,6 +156,7 @@
      margin: auto;
      font-weight: 400;
      color: red;
+     visibility: visible;
  }
 
  .headerContainer h2 {
@@ -232,6 +234,14 @@
 
  button, .clickable {
      cursor: pointer;
+ }
+
+ .visible {
+     visibility: visible;
+ }
+
+ .hidden {
+     visibility: hidden;
  }
 
 

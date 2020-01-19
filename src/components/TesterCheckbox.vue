@@ -4,9 +4,10 @@
             <div class="checkboxWrapper">
                 <div v-if="!clicked" v-on:click="onClick()" class="checkbox">
                 </div>
-                <LoadingSpinner v-if="clicked" />
+                <LoadingSpinner v-if="clicked && !wrong_guess" />
+                <div v-if="wrong_guess" class="">X</div>
             </div>
-            <h3 style="margin-left: 15px; padding-top:3px;">I'm not {{label}}</h3>
+            <h3 style="margin-left: 15px; margin-top:20px;">I'm not {{label}}</h3>
         </div>
     </main>
 </template>
@@ -17,9 +18,13 @@
  @Component({
      components: {
          LoadingSpinner
-     }
+     },
  })
  export default class TesterCheckbox extends Vue {
+
+
+     @Prop([boolean, false])
+     wrong_guess;
 
      srcLabels = [
          "a racist",
@@ -43,7 +48,14 @@
 
      pickLabel (array: any[]): string {
          const label = array[Math.floor(Math.random()*array.length)];
-         return label;
+         return 'predjudiced';
+     }
+
+     setWrongGuess () {
+         this.wrong_guess = true;
+         setTimeout(() => {
+             this.wrong_guess = false;
+         }, 2000)
      }
 
      onClick () {
