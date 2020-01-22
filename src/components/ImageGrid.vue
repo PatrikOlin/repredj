@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
- import { Component, Prop, Vue } from 'vue-property-decorator';
+ import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
  @Component
  export default class ImageGrid extends Vue {
@@ -71,6 +71,23 @@
          'poor people.',
          'rich people.',
          'child abusers.',
+         'perverts.',
+         'heathens.',
+         'thieves.',
+         'bad parents.',
+         'homosexuals.',
+         'bisexuals.',
+         'asexuals.',
+         'heterosexuals.',
+         'foreigners.',
+         'atheists.',
+         'satanists.',
+         'christians.',
+         'muslims.',
+         'buddhists.',
+         'jews.',
+         'poor drivers.',
+         'alcoholics.'
         
      ]
      images: any[] = [];
@@ -100,6 +117,7 @@
          this.randomize();
      }
 
+     @Emit('onFailedSubmit')
      onSubmit () {
          this.randomize();
          this.tryAgain = true;

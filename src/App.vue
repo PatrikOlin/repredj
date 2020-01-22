@@ -1,9 +1,9 @@
 <template>
   <div id="app">
       <main class='testerContainer' v-bind:class='{folded: !checked}'>
-    <TesterCheckbox />
+    <TesterCheckbox :wrong_guess='this.wrong_guess' />
       <article class='imageGridContainer' v-bind:class='{show: checked}'>
-    <ImageGrid />
+    <ImageGrid @onFailedSubmit='setWrongGuess' />
       </article>
       </main>
   </div>
@@ -25,6 +25,7 @@ import TesterCheckbox from "./components/TesterCheckbox.vue";
 export default class App extends Vue {
 
     checked = false;
+     wrong_guess = false;
 
     mounted () {
     this.$root.$on('checkbox_checked', (clicked: boolean) => {
@@ -33,6 +34,16 @@ export default class App extends Vue {
 
     })
     }
+
+
+     setWrongGuess () {
+         if (!this.wrong_guess) {
+         this.wrong_guess = true;
+             setTimeout(() => {
+                 this.wrong_guess = false;
+             }, 2000)
+         }
+     }
  }
 </script>
 

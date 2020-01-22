@@ -5,7 +5,7 @@
                 <div v-if="!clicked" v-on:click="onClick()" class="checkbox">
                 </div>
                 <LoadingSpinner v-if="clicked && !wrong_guess" />
-                <div v-if="wrong_guess" class="">X</div>
+                <div v-if="wrong_guess" class="wrong">X</div>
             </div>
             <h3 style="margin-left: 15px; margin-top:20px;">I'm not {{label}}</h3>
         </div>
@@ -23,8 +23,8 @@
  export default class TesterCheckbox extends Vue {
 
 
-     @Prop([boolean, false])
-     wrong_guess;
+     @Prop({required: false, type: Boolean, default: false})
+     wrong_guess: boolean = false;
 
      srcLabels = [
          "a racist",
@@ -51,12 +51,6 @@
          return 'predjudiced';
      }
 
-     setWrongGuess () {
-         this.wrong_guess = true;
-         setTimeout(() => {
-             this.wrong_guess = false;
-         }, 2000)
-     }
 
      onClick () {
          this.$root.$emit('checkbox_checked', true)
@@ -95,5 +89,14 @@
      width: 460px;
      height: 100%;
      padding: 10px;
+ }
+
+ .wrong {
+     text-align: center;
+     margin: auto;
+     padding-left: 5px;
+     font-size: 2.5em;
+     font-weight: bolder;
+     color: red;
  }
 </style>
