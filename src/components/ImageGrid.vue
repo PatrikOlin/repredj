@@ -10,19 +10,19 @@
             class='grid-item clickable'
             v-on:click="imgOnClick(index)"
             v-bind:class="{chosen: image.isChosen}">
-            <span class='chosenCheckmark' v-if="image.isChosen"><i class="fas fa-2x fa-check-circle"></i></span>
+            <span class='chosenCheckmark' v-if="image.isChosen">
+                <i class="fas fa-2x fa-check-circle"></i></span>
             <img :src='image.url'/>
-
         </div>
     </div>
-        <div class="tryAgain" v-if="tryAgain">
-            <p>Please try again</p>
-        </div>
     <div class='footerContainer'>
         <div class='miscButtons'>
             <span v-on:click='onRedo()' class="clickable"><i class="fas fa-lg fa-redo"></i></span>
             <span><i class="fas fa-lg fa-headphones-alt"></i></span>
             <span><i class="fas fa-lg fa-info-circle"></i></span>
+        </div>
+        <div class="tryAgain" v-bind:class="{hidden: !tryAgain}">
+            <p>Please try again</p>
         </div>
         <button type="button" v-on:click='onSubmit()'>Verify</button>
     </div>
@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
- import { Component, Prop, Vue } from 'vue-property-decorator';
+ import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
  @Component
  export default class ImageGrid extends Vue {
@@ -88,6 +88,24 @@
          'the mentally ill.',
          'poor people.',
          'rich people.',
+         'child abusers.',
+         'perverts.',
+         'heathens.',
+         'thieves.',
+         'bad parents.',
+         'homosexuals.',
+         'bisexuals.',
+         'asexuals.',
+         'heterosexuals.',
+         'foreigners.',
+         'atheists.',
+         'satanists.',
+         'christians.',
+         'muslims.',
+         'buddhists.',
+         'jews.',
+         'poor drivers.',
+         'alcoholics.'
         
      ]
      images: any[] = [];
@@ -117,6 +135,7 @@
          this.randomize();
      }
 
+     @Emit('onFailedSubmit')
      onSubmit () {
          this.randomize();
          this.tryAgain = true;
@@ -173,6 +192,7 @@
      margin: auto;
      font-weight: 400;
      color: red;
+     visibility: visible;
  }
 
  .headerContainer h2 {
@@ -250,6 +270,14 @@
 
  button, .clickable {
      cursor: pointer;
+ }
+
+ .visible {
+     visibility: visible;
+ }
+
+ .hidden {
+     visibility: hidden;
  }
 
 
