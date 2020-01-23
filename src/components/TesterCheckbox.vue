@@ -42,7 +42,8 @@
      }
 
      pickLabel (array: any[]): string {
-         const label = array[Math.floor(Math.random()*array.length)];
+         /* const label = array[Math.floor(Math.random()*array.length)]; */
+         const label = "predjudiced."
          return label;
      }
 
