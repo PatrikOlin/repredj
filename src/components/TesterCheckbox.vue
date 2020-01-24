@@ -45,7 +45,7 @@ export default class TesterCheckbox extends Vue {
 
   pickLabel(array: any[]): string {
     const label = array[Math.floor(Math.random() * array.length)];
-    return "predjudiced";
+    return "prejudiced";
   }
 
   onClick() {

@@ -123,7 +123,6 @@
          }
          console.log(JSON.parse(JSON.stringify(array)));
          return array;
-
      }
 
      pickTaskSelectionItem(array: any[]): any {
@@ -137,8 +136,16 @@
 
      @Emit('onFailedSubmit')
      onSubmit () {
+         if (this.images.some(img => img.isChosen)) {
          this.randomize();
          this.tryAgain = true;
+         } else {
+             this.onSuccess()
+         }
+     }
+    
+     @Emit('onSuccess')
+     onSuccess() {
      }
 
      randomize () {

@@ -3,7 +3,7 @@
       <main class='testerContainer' v-bind:class='{folded: !checked}'>
     <TesterCheckbox :wrong_guess='this.wrong_guess' />
       <article class='imageGridContainer' v-bind:class='{show: checked}'>
-    <ImageGrid @onFailedSubmit='setWrongGuess' />
+    <ImageGrid @onFailedSubmit='setWrongGuess' @onSuccess='onSuccess' />
       </article>
       </main>
   </div>
@@ -25,24 +25,25 @@ import TesterCheckbox from "./components/TesterCheckbox.vue";
 export default class App extends Vue {
 
     checked = false;
-     wrong_guess = false;
+    wrong_guess = false;
 
     mounted () {
-    this.$root.$on('checkbox_checked', (clicked: boolean) => {
-    this.checked = clicked;
-    console.log('Checkbox chcked', clicked);
-
-    })
+        this.$root.$on('checkbox_checked', (clicked: boolean) => {
+            this.checked = clicked;
+        })
     }
 
-
-     setWrongGuess () {
-         if (!this.wrong_guess) {
+    setWrongGuess () {
+       if (!this.wrong_guess) {
          this.wrong_guess = true;
              setTimeout(() => {
                  this.wrong_guess = false;
              }, 2000)
-         }
+        }
+     }
+
+     onSuccess() {
+         console.log('a winner is you')
      }
  }
 </script>
