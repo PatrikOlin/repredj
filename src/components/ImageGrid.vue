@@ -18,7 +18,7 @@
     <div class='footerContainer'>
         <div class='miscButtons'>
             <span v-on:click='onRedo()' class="clickable"><i class="fas fa-lg fa-redo"></i></span>
-            <span><i class="fas fa-lg fa-headphones-alt"></i></span>
+            <span v-on:click='playAudio()' class="clickable"><i class="fas fa-lg fa-headphones-alt"></i></span>
             <span><i class="fas fa-lg fa-info-circle"></i></span>
         </div>
         <div class="tryAgain" v-bind:class="{hidden: !tryAgain}">
@@ -31,6 +31,7 @@
 
 <script lang="ts">
  import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
+ import { Howl } from 'howler';
 
  @Component
  export default class ImageGrid extends Vue {
@@ -52,7 +53,6 @@
          {id: 14, isChosen: false, url:  require('@/assets/img/person(14).jpg')},
          {id: 15, isChosen: false, url:  require('@/assets/img/person(15).jpg')},
          {id: 16, isChosen: false, url:  require('@/assets/img/person(16).jpg')},
-         {id: 17, isChosen: false, url:  require('@/assets/img/person(17).jpg')},
          {id: 18, isChosen: false, url:  require('@/assets/img/person(18).jpg')},
          {id: 19, isChosen: false, url:  require('@/assets/img/person(19).jpg')},
          {id: 20, isChosen: false, url:  require('@/assets/img/person(20).jpg')},
@@ -121,7 +121,6 @@
              const j = Math.floor(Math.random() * (i + 1));
              [array[i], array[j]] = [array[j], array[i]];
          }
-         console.log(JSON.parse(JSON.stringify(array)));
          return array;
      }
 
@@ -134,20 +133,18 @@
          this.randomize();
      }
 
-     @Emit('onFailedSubmit')
+     @Emit('onSubmit')
      onSubmit () {
+         let success = false;
          if (this.images.some(img => img.isChosen)) {
          this.randomize();
          this.tryAgain = true;
          } else {
-             this.onSuccess()
+             success = true;
          }
+         return success;
      }
     
-     @Emit('onSuccess')
-     onSuccess() {
-     }
-
      randomize () {
         this.clearAllChosen();
         this.images = this.shuffleArray(this.srcImages).slice(0, 9);
@@ -162,6 +159,14 @@
      imgOnClick (index: number) {
          this.tryAgain = false;
          this.images[index].isChosen = !this.images[index].isChosen;
+     }
+
+     playAudio () {
+         let sound = new Howl({
+             src:require('@/assets/audio/madonna_wtf.mp3'),
+             volume: 0.5,
+         });
+         sound.play()
      }
 
  }

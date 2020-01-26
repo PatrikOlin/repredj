@@ -3,8 +3,9 @@
     <div class="checkboxContainer">
       <div class="checkboxWrapper">
         <div v-if="!clicked" v-on:click="onClick()" class="checkbox"></div>
-        <LoadingSpinner v-if="clicked && !wrong_guess" />
-        <div v-if="wrong_guess" class="wrong">X</div>
+        <LoadingSpinner v-if="clicked && !wrong_guess && !correct_guess" />
+        <div v-if="wrong_guess" class="answerSymbol wrong">X</div>
+        <div v-if="correct_guess" class="answerSymbol correct"><i class="fas fa-check"></i></div>
       </div>
       <h3 style="margin-left: 15px; margin-top:20px;">I'm not {{label}}</h3>
     </div>
@@ -22,6 +23,8 @@ import LoadingSpinner from "./LoadingSpinner.vue";
 export default class TesterCheckbox extends Vue {
   @Prop({ required: false, type: Boolean, default: false })
   wrong_guess: boolean = false;
+  @Prop({ required: false, type: Boolean, default: false })
+  correct_guess: boolean = false;
 
   srcLabels = [
     "a racist",
@@ -82,17 +85,23 @@ export default class TesterCheckbox extends Vue {
   align-items: center;
   justify-items: center;
   margin: auto;
-  width: 460px;
   height: 100%;
   padding: 10px;
 }
 
-.wrong {
+.answerSymbol {
   text-align: center;
   margin: auto;
   padding-left: 5px;
   font-size: 2.5em;
   font-weight: bolder;
-  color: red;
 }
+
+ .wrong {
+     color: red;
+ }
+
+ .correct {
+     color: green;
+ }
 </style>
