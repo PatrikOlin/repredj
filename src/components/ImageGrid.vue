@@ -53,6 +53,7 @@
          {id: 14, isChosen: false, url:  require('@/assets/img/person(14).jpg')},
          {id: 15, isChosen: false, url:  require('@/assets/img/person(15).jpg')},
          {id: 16, isChosen: false, url:  require('@/assets/img/person(16).jpg')},
+         {id: 17, isChosen: false, url:  require('@/assets/img/person(17).jpg')},
          {id: 18, isChosen: false, url:  require('@/assets/img/person(18).jpg')},
          {id: 19, isChosen: false, url:  require('@/assets/img/person(19).jpg')},
          {id: 20, isChosen: false, url:  require('@/assets/img/person(20).jpg')},

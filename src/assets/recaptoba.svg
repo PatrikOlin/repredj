@@ -1,1 +1,46 @@
-<svg id="svg3643" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.33 60"><defs><style>.cls-1{fill:#1c3aa9;}.cls-2{fill:#4285f4;}.cls-3{fill:#ababab;}.cls-4{fill:none;}.cls-5{isolation:isolate;}.cls-6{fill:#a6a6a6;}</style></defs><title>recaptoba</title><path id="path3645" class="cls-1" d="M50.48,21.18V6.48l-3.9,3.8a17.29,17.29,0,0,0-13.4-6.4c-5.6,0-10.16,2.87-13.36,7l5.8,6.07a8,8,0,0,1,2.76-2.74,7.54,7.54,0,0,1,4.9-1.6,8,8,0,0,1,7,4l-4.5,4.5c5.6.1,12.1,0,14.7.1"/><path id="path3647" class="cls-2" d="M33.08,3.88H18.38l3.9,3.9a17.29,17.29,0,0,0-6.4,13.4,16.89,16.89,0,0,0,6.91,13.42l6-5.78A8.05,8.05,0,0,1,26.18,26a8.9,8.9,0,0,1-1.5-5.5,8.3,8.3,0,0,1,3.9-6.4l4.5,4.5V3.88"/><path id="path3649" class="cls-3" d="M15.88,21.18v14.7l3.9-3.9a17.29,17.29,0,0,0,13.4,6.4A17.53,17.53,0,0,0,47,31.58l-6.4-6.4a8,8,0,0,1-2.6,2.9,7.54,7.54,0,0,1-4.9,1.6,8.87,8.87,0,0,1-7-4l4.5-4.5c-5.7.1-12.1.1-14.7,0"/><rect class="cls-4" x="-8.53" y="42.7" width="83.3" height="15.6"/><g class="cls-5"><path class="cls-6" d="M6.38,49.33h0a1.91,1.91,0,0,1,1.82-1.19v1.58L8,49.7c-1.19,0-1.56.66-1.56,1.75v5.41H4.78V48.27h1.6Z"/><path class="cls-6" d="M10.73,52.88c0,.71,0,2.69,1,2.69.85,0,1-.93,1-1.6h1.48c0,1.58-.7,3-2.5,3-2.4,0-2.62-2.55-2.62-4.37s.2-4.49,2.57-4.49,2.6,2.72,2.6,4.49v.25Zm1.9-1.14c0-.66,0-2.18-1-2.18s-.93,1.51-.93,2.18Z"/><path class="cls-6" d="M20.75,45.79a2.44,2.44,0,0,0-1.09-.32c-2.38,0-2.4,3.47-2.4,5.07s.14,4.9,2.46,4.9a2.11,2.11,0,0,0,1-.25v1.5a2.41,2.41,0,0,1-1.36.36c-3.47,0-3.93-3.69-3.93-6.37s.32-6.78,3.81-6.78a2.63,2.63,0,0,1,1.48.37Z"/><path class="cls-6" d="M25.22,44,28,56.86H26.25l-.48-2.5H23.23l-.48,2.5H21.09L23.87,44Zm0,7.14-.65-4.66h0l-1,6.51h2Z"/><path class="cls-6" d="M29.09,56.86V44h2c1.46,0,3.33.14,3.33,3.43,0,2.6-1,3.81-3.67,3.71v5.68Zm1.7-11.37v4.25c1.46.1,1.87-.7,1.87-2.12,0-1.16-.34-2.12-1.63-2.12Z"/><path class="cls-6" d="M40.21,44v1.48H38.29V56.86h-1.7V45.52h-2V44Z"/><path class="cls-6" d="M47.52,50.45c0,2.31,0,6.58-3.33,6.58s-3.33-4.27-3.33-6.58,0-6.58,3.33-6.58S47.52,48.14,47.52,50.45Zm-4.86,0c0,2.72.19,5,1.53,5s1.53-2.26,1.53-5-.19-5-1.53-5S42.66,47.73,42.66,50.45Z"/><path class="cls-6" d="M49.27,56.86V44H51.4c2.31,0,3,1.27,3,3.43,0,1.26-.25,2.48-1.61,2.84v0c1.46.46,1.8,1.58,1.8,3,0,2.36-.87,3.5-3.23,3.5Zm1.9-11.37h-.29v4.2c1.58.07,1.8-.92,1.8-2.28C52.69,46.4,52.35,45.47,51.18,45.48Zm-.29,9.93c1.48.07,1.85-.7,1.85-2.11S52.45,51,50.89,51Z"/><path class="cls-6" d="M59.54,44l2.75,12.82H60.58l-.48-2.5H57.55l-.48,2.5H55.41L58.2,44Zm0,7.14-.65-4.66h0l-1,6.51h2Z"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg3643" inkscape:version="0.92.3 (2405546, 2018-03-11)" sodipodi:docname="google_recaptcha-ar21.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 66.3 60"
+	 style="enable-background:new 0 0 66.3 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1C3AA9;}
+	.st1{fill:#4285F4;}
+	.st2{fill:#ABABAB;}
+	.st3{fill:#A6A6A6;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" gridtolerance="10" guidetolerance="10" id="namedview3653" inkscape:current-layer="svg3643" inkscape:cx="88.023175" inkscape:cy="19.079678" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1001" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:zoom="4.3322076" objecttolerance="10" pagecolor="#ffffff" showgrid="false">
+	</sodipodi:namedview>
+<path id="path3645" inkscape:connector-curvature="0" class="st0" d="M50.5,21.2c0-0.2,0-0.5,0-0.7v-14l-3.9,3.8
+	c-3.2-3.9-8-6.4-13.4-6.4c-5.6,0-10.2,2.9-13.4,7l5.8,6.1c0.6-1.2,1.7-1.9,2.8-2.7c1.1-0.9,2.7-1.6,4.9-1.6c3.6,0.2,5.6,1.8,7,4
+	l-4.5,4.5C41.4,21.2,47.9,21.1,50.5,21.2"/>
+<path id="path3647" inkscape:connector-curvature="0" class="st1" d="M33.1,3.9c-0.2,0-0.5,0-0.7,0h-14l3.9,3.9
+	c-3.9,3.2-6.4,8-6.4,13.4c0,5.6,2.8,10.2,6.9,13.4l6-5.8c-1.2-0.6-1.8-1.7-2.6-2.8c-1.7-2.6-1.6-5.4-1.5-5.5c0.2-2.7,1.7-5,3.9-6.4
+	l4.5,4.5C33.1,13,33.1,6.6,33.1,3.9"/>
+<path id="path3649" inkscape:connector-curvature="0" class="st2" d="M15.9,21.2c0,0.2,0,0.5,0,0.7v14l3.9-3.9
+	c3.2,3.9,8,6.4,13.4,6.4c5.6,0,10.6-2.7,13.8-6.8l-6.4-6.4c-0.6,1.2-1.5,2.1-2.6,2.9c-1.1,0.9-2.7,1.6-4.9,1.6c-2.8,0-5.6-1.8-7-4
+	l4.5-4.5C24.9,21.3,18.5,21.3,15.9,21.2"/>
+<rect x="-109.4" y="64.8" style="fill:none;" width="85.2" height="30.5"/>
+<text transform="matrix(1 0 0 1 -109.3835 78.9424)"><tspan x="0" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">r</tspan><tspan x="4.7" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">eC</tspan><tspan x="17.9" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">A</tspan><tspan x="25" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">P</tspan><tspan x="32.1" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">TOBH</tspan><tspan x="61.1" y="0" class="st3" style="font-family:'FuturaStd-Condensed'; font-size:17px;">A</tspan></text>
+<g>
+	<path class="st3" d="M5.5,48.6L5.5,48.6c0.4-0.7,0.8-1,1.6-1v1.4l-0.2,0c-1,0-1.4,0.6-1.4,1.5v4.7H4.1v-7.5h1.4V48.6z"/>
+	<path class="st3" d="M9.4,51.7c0,0.6,0,2.3,0.9,2.3c0.7,0,0.9-0.8,0.9-1.4h1.3c0,1.4-0.6,2.6-2.2,2.6c-2.1,0-2.3-2.2-2.3-3.8
+		c0-1.5,0.2-3.9,2.2-3.9c2,0,2.3,2.4,2.3,3.9v0.2H9.4z M11,50.7c0-0.6,0-1.9-0.8-1.9c-0.9,0-0.8,1.3-0.8,1.9H11z"/>
+	<path class="st3" d="M18.4,45.5c-0.3-0.1-0.6-0.3-0.9-0.3c-2.1,0-2.1,3-2.1,4.4c0,1.5,0.1,4.3,2.1,4.3c0.3,0,0.6-0.1,0.9-0.2V55
+		c-0.4,0.2-0.8,0.3-1.2,0.3c-3,0-3.4-3.2-3.4-5.6c0-2.2,0.3-5.9,3.3-5.9c0.5,0,0.9,0.1,1.3,0.3V45.5z"/>
+	<path class="st3" d="M22.7,44l2.4,11.2h-1.5L23.2,53H21l-0.4,2.2h-1.5L21.5,44H22.7z M22.7,50.2l-0.6-4.1h0l-0.9,5.7H23L22.7,50.2z
+		"/>
+	<path class="st3" d="M26.2,55.2V44h1.8c1.3,0,2.9,0.1,2.9,3c0,2.3-0.9,3.3-3.2,3.2v4.9H26.2z M27.6,45.2v3.7
+		c1.3,0.1,1.6-0.6,1.6-1.9c0-1-0.3-1.9-1.4-1.9H27.6z"/>
+	<path class="st3" d="M36.2,44v1.3h-1.7v9.9h-1.5v-9.9h-1.7V44H36.2z"/>
+	<path class="st3" d="M42.7,49.6c0,2,0,5.7-2.9,5.7c-2.9,0-2.9-3.7-2.9-5.7s0-5.7,2.9-5.7C42.6,43.8,42.7,47.6,42.7,49.6z
+		 M38.4,49.6c0,2.4,0.2,4.3,1.3,4.3c1.2,0,1.3-2,1.3-4.3s-0.2-4.3-1.3-4.3C38.6,45.2,38.4,47.2,38.4,49.6z"/>
+	<path class="st3" d="M44.3,55.2V44h1.9c2,0,2.6,1.1,2.6,3c0,1.1-0.2,2.2-1.4,2.5v0c1.3,0.4,1.6,1.4,1.6,2.6c0,2.1-0.8,3.1-2.8,3.1
+		H44.3z M45.9,45.2h-0.3v3.7c1.4,0.1,1.6-0.8,1.6-2C47.3,46,47,45.2,45.9,45.2z M45.7,53.9c1.3,0.1,1.6-0.6,1.6-1.8s-0.3-2-1.6-2
+		V53.9z"/>
+	<path class="st3" d="M52,44v4.4h2.2V44h1.5v11.2h-1.5v-5.5H52v5.5h-1.5V44H52z"/>
+	<path class="st3" d="M60.4,44l2.4,11.2h-1.5L60.9,53h-2.2l-0.4,2.2h-1.5L59.2,44H60.4z M60.4,50.2l-0.6-4.1h0l-0.9,5.7h1.8
+		L60.4,50.2z"/>
+</g>
+</svg>
