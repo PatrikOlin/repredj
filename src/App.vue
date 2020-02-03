@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Emit } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
 import ImageGrid from "./components/ImageGrid.vue";
 import TesterCheckbox from "./components/TesterCheckbox.vue";
@@ -58,10 +58,11 @@ export default class App extends Vue {
         }
      }
 
+    @Emit("onSuccess")
      onSuccess () {
          this.correct_guess = true;
          this.checked = false;
-         console.log('a winner is you', this.correct_guess)
+         return true;
      }
  }
 </script>

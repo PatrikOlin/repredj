@@ -28,7 +28,6 @@
     </div>
     </main>
 </template>
-
 <script lang="ts">
  import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
  import { Howl } from 'howler';
